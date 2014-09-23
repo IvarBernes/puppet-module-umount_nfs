@@ -3,7 +3,15 @@
 
 class puppet-module-umount_nfs (
   $arealist = undef,
+  $killprocs = undef,
 ){
   $mountpoint = hiera_array("puppet-module-umount_nfs::arealist", undef)
-  puppet-module-umount_nfs::umount {$mountpoint:}
+  $bool_killprocs = type($killprocs) ? {
+    'String' => str2bool($killprocs),
+    default  => $killprocs,
+  }
+  
+  puppet-module-umount_nfs::umount {$mountpoint:
+    fuser => $bool_killprocs,
+  }
 }

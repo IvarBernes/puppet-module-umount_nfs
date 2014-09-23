@@ -1,4 +1,4 @@
-# puppet-module-umount_nfs
+# umount_nfs
 ===
 
 Puppet module for unmounting nfs shares and optionally kill any process using these shares.

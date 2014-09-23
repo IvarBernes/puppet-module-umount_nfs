@@ -19,7 +19,7 @@ String or array listing the NFS shares that is going to be unmounted.
 
 killprocs
 ------------
-Boolean to indicate if processes should be killed or not.
+Boolean that indicate if processes making the share busy should be killed or not.
 
 - *Default*: false
 
@@ -28,12 +28,12 @@ Boolean to indicate if processes should be killed or not.
 # Defines
 
 ## `umount_nfs::umount`
-
+The title must be a full path to a nfs share, for example: /proj/area
 
 ### Parameters required or with defaults
 
 fuser
 -----
-Boolean to indicate if processes should be killed or not.
+Boolean that indicate if processes making the share busy should be killed or not.
 
 - *Default*: false

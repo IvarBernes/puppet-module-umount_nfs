@@ -37,3 +37,17 @@ fuser
 Boolean that indicate if processes making the share busy should be killed or not.
 
 - *Default*: false
+
+
+===
+
+# Hiera
+
+## Example:
+
+umount_nfs::killprocs: "true"
+umount_nfs::arealist:
+  - "/proj/some_area/"
+  - "/proj/some_other_area/"
+  - "/test/mnt/"
+

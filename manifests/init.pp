@@ -4,7 +4,7 @@
 #
 class umount_nfs (
   $arealist = undef,
-  $killprocs = undef,
+  $killprocs = false,
 ){
   $mountpoint = hiera_array("umount_nfs::arealist", undef)
   $bool_killprocs = type($killprocs) ? {
@@ -12,7 +12,9 @@ class umount_nfs (
     default  => $killprocs,
   }
   
-  umount_nfs::umount {$mountpoint:
-    fuser => $bool_killprocs,
+  if $mountpoint != undef {
+    umount_nfs::umount {$mountpoint:
+      fuser => $bool_killprocs,
+    }
   }
 }

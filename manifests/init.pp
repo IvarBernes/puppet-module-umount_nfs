@@ -1,17 +1,18 @@
-# puppet-module-umount_nfs
-# kills processes using a specified area and then unmounts that area.
-
-class puppet-module-umount_nfs (
+# == Class: umount_nfs
+#
+# Unmounts NFS shares and optionally kills processes using those shares.
+#
+class umount_nfs (
   $arealist = undef,
   $killprocs = undef,
 ){
-  $mountpoint = hiera_array("puppet-module-umount_nfs::arealist", undef)
+  $mountpoint = hiera_array("umount_nfs::arealist", undef)
   $bool_killprocs = type($killprocs) ? {
     'String' => str2bool($killprocs),
     default  => $killprocs,
   }
   
-  puppet-module-umount_nfs::umount {$mountpoint:
+  umount_nfs::umount {$mountpoint:
     fuser => $bool_killprocs,
   }
 }

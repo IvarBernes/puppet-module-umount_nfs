@@ -1,7 +1,8 @@
-# Defines a resource that kills processes and unmounts areas supplied via an array
-# exec fuser -> returns ["0","1"] due to that fuser exits with 1 if there are no processes to kill.
-
-define puppet-module-umount_nfs::umount (
+# == Type: umount_nfs::umount
+#
+# This type performs umount of a given nfs share and exec:s fuser to kill processes using that area.
+#
+define umount_nfs::umount (
   $fuser = false,
 ) {
   $bool_fuser = type($fuser) ? {

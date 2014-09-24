@@ -3,50 +3,43 @@
 
 Puppet module for unmounting nfs shares and optionally kill any process using these shares.
 
-Will try to unmount the resource given to it, but will fail if the resource is "busy" unless the 'killprocs' parameter is set to 'true', since it will then first kill any processes making the resource busy.
-
+Will try to unmount the resource given to it, but will fail if the resource is "busy" unless the 'kill_procs' parameter is set to 'true', since it will then first kill any processes making the resource busy.
 
 ===
+
 
 # Parameters
 ------------
 
-arealist
+mount_points
 --------------
-String or array listing the NFS shares that is going to be unmounted.
+Array listing the mount points that needs to be unmounted.
 
 - *Default*: undef
 
-killprocs
+kill_procs
 ------------
-Boolean that indicate if processes making the share busy should be killed or not.
+Boolean to control if processes making the mount point busy should be killed or not.
 
 - *Default*: false
 
-===
+hiera_merge
+------------
+Boolean to control merges of all found instances of umount_nfs::mount_points in Hiera.
 
-# Defines
-
-## `umount_nfs::umount`
-The title must be a full path to a nfs share, for example: /proj/area
-
-### Parameters required or with defaults
-
-fuser
------
-Boolean that indicate if processes making the share busy should be killed or not.
-
-- *Default*: false
-
+- *Default*: true
 
 ===
+
 
 # Hiera
+-------
 
 ## Example:
 <pre>
-umount_nfs::killprocs: "true"
-umount_nfs::arealist:
+umount_nfs::kill_procs: "true"
+umount_nfs::hiera_merge: "true"
+umount_nfs::mount_points:
   - "/proj/some_area/"
   - "/proj/some_other_area/"
   - "/test/mnt/"

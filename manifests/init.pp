@@ -14,7 +14,7 @@ class umount_nfs (
           #noop
         }
         default: {
-          fail("The umount_nfs module is supported by release 5, and 6 of the RedHat Family. Your release is ${::lsbmajdistrelease}")
+          fail("The umount_nfs module is supported by release 5 and 6 of the RedHat Family. Your release is ${::lsbmajdistrelease}")
         }
       }
     }
@@ -44,7 +44,7 @@ class umount_nfs (
           #noop
         }
         default: {
-          fail("The umount_nfs module supports Solaris kernel release 5.9, and 5.10. You are running ${::kernelrelease}.")
+          fail("The umount_nfs module supports Solaris kernel release 5.9 and 5.10. You are running ${::kernelrelease}.")
         }
       }
     }

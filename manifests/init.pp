@@ -14,7 +14,7 @@ class umount_nfs (
           #noop
         }
         default: {
-          fail("The umount_nfs module is supported by release 5, 6 and 7 of the RedHat Family. Your release is ${::lsbmajdistrelease}")
+          fail("The umount_nfs module is supported by release 5, and 6 of the RedHat Family. Your release is ${::lsbmajdistrelease}")
         }
       }
     }

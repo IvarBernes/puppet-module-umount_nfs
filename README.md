@@ -8,23 +8,36 @@ Will try to unmount the resource given to it, but will fail if the resource is "
 ===
 
 
+# Compatibility
+---------------
+This module is supported on the following systems.
+
+ * RHEL 5
+ * RHEL 6
+ * SLES 10
+ * SLES 11
+ * Solaris 10
+ * Ubuntu 12.04 LTS
+ * Ubuntu 14.04 LTS
+
+
 # Parameters
 ------------
 
 mount_points
---------------
+------------
 Array listing the mount points that needs to be unmounted.
 
 - *Default*: undef
 
 kill_procs
-------------
+----------
 Boolean to control if processes making the mount point busy should be killed or not.
 
 - *Default*: false
 
 hiera_merge
-------------
+-----------
 Boolean to control merges of all found instances of umount_nfs::mount_points in Hiera.
 
 - *Default*: true

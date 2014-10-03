@@ -12,6 +12,7 @@ Will try to unmount the resource given to it, but will fail if the resource is "
 ---------------
 This module is supported on the following systems.
 
+ * CentOS 6
  * RHEL 5
  * RHEL 6
  * SLES 10

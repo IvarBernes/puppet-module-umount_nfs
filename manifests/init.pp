@@ -14,7 +14,7 @@ class umount_nfs (
           #noop
         }
         default: {
-          fail("The umount_nfs module is supported by release 5 and 6 of the RedHat Family. Your release is ${::lsbmajdistrelease}")
+          fail("The umount_nfs module is supported by release 5 and 6 of the RedHat Family. Your release is ${::lsbmajdistrelease}.")
         }
       }
     }
@@ -24,32 +24,32 @@ class umount_nfs (
           #noop
         }
         default: {
-          fail("The umount_nfs module is supported by release 10 and 11 of the Suse Family. Your release is ${::lsbmajdistrelease}")
+          fail("The umount_nfs module is supported by release 10 and 11 of the Suse Family. Your release is ${::lsbmajdistrelease}.")
         }
       }
     }
     'Debian': {
-      case $::lsbmajdistrelease {
-        '12','13','14': {
+      case $::lsbdistrelease {
+        '12.04','14.04': {
           #noop
         }
-        default: {
-          fail("The umount_nfs module is supported by 12, 13 and 14 of the Debian Family. Your release is ${::lsbmajdistrelease}")
+        default : {
+          fail("The umount_nfs module is supported by LTS release 12.04 and 14.04 of the Ubuntu Family. Your release is ${::lsbdistrelease}.")
         }
       }
     }
     'Solaris': {
       case $::kernelrelease {
-        '5.9','5.10': {
+        '5.10': {
           #noop
         }
         default: {
-          fail("The umount_nfs module supports Solaris kernel release 5.9 and 5.10. You are running ${::kernelrelease}.")
+          fail("The umount_nfs module supports Solaris kernel release 5.10. You are running ${::kernelrelease}.")
         }
       }
     }
     default: {
-      fail("The umount_nfs module is supported by the Debian, Redhat, Suse and Solaris Families. Your Family is ${::osfamily}")
+      fail("The umount_nfs module is supported by the Redhat, Suse, Solaris and Ubuntu Families. Your Family is ${::osfamily}.")
     }
   }
   

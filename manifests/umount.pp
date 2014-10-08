@@ -10,15 +10,15 @@ define umount_nfs::umount (
     default  => $with_fuser,
   }
   if $with_fuser_bool == true {
-    exec { "umount_with_fuser-$title" :
-      command  => "fuser -k $title",
-      path     => ["/bin/", "/sbin", "/usr/sbin"],
-      returns  => ["0","1"],
-      before   => Mount["umount-$title"],
+    exec { "umount_with_fuser-${title}" :
+      command => "fuser -k ${title}",
+      path    => ['/bin/', '/sbin', '/usr/sbin'],
+      returns => ['0','1'],
+      before  => Mount["umount-${title}"],
     }
   }
-  mount { "umount-$title" :
-    name    => $title,
-    ensure  => 'absent',
+  mount { "umount-${title}" :
+    ensure => 'absent',
+    name   => $title,
   }
 }

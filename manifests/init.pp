@@ -52,7 +52,7 @@ class umount_nfs (
       fail("The umount_nfs module is supported by the Redhat, Suse, Solaris and Ubuntu Families. Your Family is ${::osfamily}.")
     }
   }
-  
+
   $hiera_merge_bool = type($hiera_merge) ? {
     'String' => str2bool($hiera_merge),
     default  => $hiera_merge,
@@ -64,7 +64,7 @@ class umount_nfs (
     default  => $kill_procs,
   }
   validate_bool($kill_procs_bool)
-  
+
   if $mount_points != undef {
     if $hiera_merge_bool == true {
       $mount_points_real = hiera_array('umount_nfs::mount_points')

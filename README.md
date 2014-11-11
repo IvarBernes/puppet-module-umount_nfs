@@ -21,7 +21,7 @@ This module has been tested on the following systems.
  * Ubuntu 12.04 LTS
  * Ubuntu 14.04 LTS
 
-Since it is a quite basic module, no issues are expected in these OS families and no check for untested OS releases is performed. 
+Since it is a quite basic module, no issues are expected in these OS families and no check for untested OS families or releases is performed.
 
 # Parameters
 ------------

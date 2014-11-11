@@ -10,7 +10,7 @@ Will try to unmount the resource given to it, but will fail if the resource is "
 
 # Compatibility
 ---------------
-This module is supported on the following systems.
+This module has been tested on the following systems.
 
  * CentOS 6
  * RHEL 5
@@ -21,6 +21,7 @@ This module is supported on the following systems.
  * Ubuntu 12.04 LTS
  * Ubuntu 14.04 LTS
 
+Since it is a quite basic module, no issues are expected in these OS families and no check for untested OS releases is performed. 
 
 # Parameters
 ------------

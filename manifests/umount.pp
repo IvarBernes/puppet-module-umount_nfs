@@ -18,7 +18,7 @@ define umount_nfs::umount (
     }
   }
   mount { "umount-${title}" :
-    ensure => 'absent',
+    ensure => 'unmounted',
     name   => $title,
   }
 }

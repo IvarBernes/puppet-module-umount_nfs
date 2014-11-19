@@ -16,7 +16,7 @@ describe 'umount_nfs::umount' do
 
       it {
         should contain_mount('umount-/mnt/test').only_with({
-          'ensure' => 'absent',
+          'ensure' => 'unmounted',
           'name'   => '/mnt/test',
         })
       }
@@ -41,7 +41,7 @@ describe 'umount_nfs::umount' do
 
           it {
             should contain_mount('umount-/mnt/test').only_with({
-              'ensure' => 'absent',
+              'ensure' => 'unmounted',
               'name'   => '/mnt/test',
             })
           }

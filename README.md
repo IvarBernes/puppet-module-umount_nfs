@@ -3,7 +3,7 @@
 
 Puppet module for unmounting nfs shares and optionally kill any process using these shares.
 
-Will try to unmount the resource given to it, but will fail if the resource is "busy" unless the 'kill_procs' parameter is set to 'true', since it will then first kill (SIGKILL) any processes making the resource busy.
+It will try to unmount the resource given to it, but will fail if the resource is "busy" unless the 'kill_procs' parameter is set to 'true', since it will then first kill (SIGKILL) any processes making the resource busy. Also, the moint point will be removed from the fstab if it is listed there.
 
 ===
 

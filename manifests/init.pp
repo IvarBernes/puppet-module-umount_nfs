@@ -7,14 +7,14 @@ class umount_nfs (
   $kill_procs   = false,
   $hiera_merge  = true,
 ){
-  $hiera_merge_bool = type($hiera_merge) ? {
-    'String' => str2bool($hiera_merge),
+  $hiera_merge_bool = is_string($hiera_merge) ? {
+    true => str2bool($hiera_merge),
     default  => $hiera_merge,
   }
   validate_bool($hiera_merge_bool)
 
-  $kill_procs_bool = type($kill_procs) ? {
-    'String' => str2bool($kill_procs),
+  $kill_procs_bool = is_string($kill_procs) ? {
+    true => str2bool($kill_procs),
     default  => $kill_procs,
   }
   validate_bool($kill_procs_bool)

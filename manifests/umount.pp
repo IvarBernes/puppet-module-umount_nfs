@@ -5,10 +5,12 @@
 define umount_nfs::umount (
   $with_fuser = false,
 ) {
-  $with_fuser_bool = type($with_fuser) ? {
-    'String' => str2bool($with_fuser),
+  $with_fuser_bool = is_string($with_fuser) ? {
+    true => str2bool($with_fuser),
     default  => $with_fuser,
   }
+  validate_bool($with_fuser_bool)
+
   if $with_fuser_bool == true {
     exec { "umount_with_fuser-${title}" :
       command => "fuser -k ${title}",

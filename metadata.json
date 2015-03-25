@@ -1,9 +1,10 @@
 {
-  "name": "umount_nfs",
+  "name": "IvarBernes-umount_nfs",
   "version": "1.0.0",
-  "author": "Ivar Bernes",
+  "author": "IvarBernes",
+  "license": "Apache License, Version 2.0",
   "summary": "Unmounts nfs shares and optionally kill any process using these shares.",
-  "source": "git@github.com:IvarBernes/puppet-module-umount_nfs.git",
+  "source": "git://github.com/IvarBernes/puppet-module-umount_nfs.git",
   "project_page": "https://github.com/IvarBernes/puppet-module-umount_nfs",
   "issues_url": "https://github.com/IvarBernes/puppet-module-umount_nfs/issues",
   "operatingsystem_support": [
@@ -39,6 +40,12 @@
         "12.04",
         "14.04"
       ]
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 3.2.0"
     }
   ]
 }

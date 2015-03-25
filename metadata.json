@@ -1,0 +1,44 @@
+{
+  "name": "umount_nfs",
+  "version": "1.0.0",
+  "author": "Ivar Bernes",
+  "summary": "Unmounts nfs shares and optionally kill any process using these shares.",
+  "source": "git@github.com:IvarBernes/puppet-module-umount_nfs.git",
+  "project_page": "https://github.com/IvarBernes/puppet-module-umount_nfs",
+  "issues_url": "https://github.com/IvarBernes/puppet-module-umount_nfs/issues",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6"
+      ]
+    },
+    {
+      "operatingsystem": "SLES",
+      "operatingsystemrelease": [
+        "10",
+        "11"
+      ]
+    },
+    {
+      "operatingsystem": "Solaris",
+      "operatingsystemrelease": [
+        "10"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "12.04",
+        "14.04"
+      ]
+    }
+  ]
+}

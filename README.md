@@ -59,3 +59,4 @@ umount_nfs::mount_points:
   - "/proj/some_other_area/"
   - "/test/mnt/"
 </pre>
+

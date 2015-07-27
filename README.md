@@ -52,11 +52,11 @@ Boolean to control merges of all found instances of umount_nfs::mount_points in 
 
 ## Example:
 <pre>
-umount_nfs::kill_procs: "true"
-umount_nfs::hiera_merge: "true"
+umount_nfs::kill_procs: 'true'
+umount_nfs::hiera_merge: 'true'
 umount_nfs::mount_points:
-  - "/proj/some_area/"
-  - "/proj/some_other_area/"
-  - "/test/mnt/"
+  - '/proj/some_area'
+  - '/proj/some_other_area'
+  - '/test/mnt'
 </pre>
 

@@ -3,5 +3,9 @@ fixtures:
     'stdlib':
       repo: 'git://github.com/puppetlabs/puppetlabs-stdlib.git'
       ref:  '3.2.0'
+    mount_core:
+      repo: 'https://github.com/puppetlabs/puppetlabs-mount_core.git'
+      ref: '1.0.2'
+      puppet_version: ">= 6.0.0"
   symlinks:
     umount_nfs: "#{source_dir}"

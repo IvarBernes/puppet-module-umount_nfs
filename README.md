@@ -10,7 +10,7 @@ It will try to unmount the resource given to it, but will fail if the resource i
 
 # Compatibility
 ---------------
-This module has been tested to work on the following systems with Puppet v3 (with and without the future parser) and Puppet v4 with Ruby versions 1.8.7, 1.9.3, 2.0.0 and 2.1.0.
+This module has been tested to work on the following systems with Puppet v3 (with and without the future parser, ruby 1.8.7, 1.9.3, 2.0.0 and 2.1.9) and Puppet v4 (2.1.9)
 
  * CentOS 6
  * RHEL 5
